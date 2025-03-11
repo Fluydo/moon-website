@@ -1,0 +1,243 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-image: url(images/moonBg.png);
+    color: white;
+    text-align: center;
+    position: relative; /* Required for pseudo-element positioning */
+    background-attachment: fixed; /* Fix the background image in place */
+}
+
+body, html {
+    overflow-x: hidden; /* Hide horizontal scrollbar */
+    width: 100%; /* Ensure the body takes up the full width */
+    max-width: 100%; /* Prevent content from exceeding the viewport width */
+}
+
+#home {
+    display: flex; /* Enables Flexbox */
+    align-items: center; /* Aligns content vertically in the center */
+    justify-content: space-between; /* Distributes space between image and text */
+    width: 100%; /* Ensures it uses the full width */
+    padding-top: 10%;
+    padding-left: 10%;
+    padding-right: 20%;
+}
+
+.image {
+    width: 636px;
+    height: 360px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3); /* Add a soft shadow around the image */
+    transition: transform 0.1s ease-out, box-shadow 0.3s ease-out; /* Smooth transitions for transform and shadow */
+    transform-style: preserve-3d; /* Ensure 3D transformations work */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+}
+
+.text-content {
+    text-align: right; /* Aligns text to the right */
+    max-width: 600px; /* Limits the width of the text content */
+    padding-right: 20%;
+}
+
+h1 {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    font-size: 2.5rem;
+    background: linear-gradient(160deg, white, rgb(141, 255, 255));
+    background-clip: border-box;    
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+p {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 300;
+    color: lightgray;
+    font-size: 1.2rem;
+    margin: 20px 0; /* Adds margin to the top and bottom of the paragraph */
+}
+
+.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background: linear-gradient(90deg, #0051ff, #a83dff);
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 3px;
+    font-family: 'Montserrat', sans-serif;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    position: relative;
+    transform: translateY(-2px);
+    box-shadow: 0 0 5px rgba(0, 81, 255, 0.7), 0 0 15px rgba(168, 61, 255, 0.7);
+}
+
+/* Ground shadow */
+.image-container {
+    position: relative;
+    display: inline-block;
+}
+
+.image-container::after {
+    content: "";
+    position: absolute;
+    bottom: -20px; /* Position the shadow under the image */
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80%; /* Size of the ground shadow */
+    height: 10px; /* Height of the shadow */
+    background: rgba(0, 0, 0, 1); /* Dark shadow color */
+    border-radius: 50%; /* Make it smooth and rounded */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.7);
+}
+
+/* Navigation Bar */
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 15px;
+    background: rgba(0, 0, 0, 0.5);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+}
+
+nav .logoImage {
+    background-image: url(images/logoImage.png);
+    width: 50px;
+    height: 50px;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+nav ul li a:hover {
+    color: cyan;
+}
+
+/* Sections */
+section {
+    padding: 100px 20px;
+}
+
+h1, h2 {
+    margin-bottom: 20px;
+}
+
+/* Features */
+#features {
+    display: flex;
+    flex-direction: column;
+    align-items: right; /* Align text content to the left */
+    padding: 20px;
+}
+
+.text-content {
+    width: 100%; /* Take up full width */
+    max-width: 600px; /* Limit width for better readability */
+    margin-bottom: 20px; /* Space between text and cards */
+}
+
+.feature-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Grid with auto-fit columns */
+    gap: 20px;
+    width: 100%; /* Take up full width */
+    justify-content: right; /* Align cards to the right */
+}
+
+.feature-card {
+    padding-left: 20px;
+    padding-bottom: 20px;
+    background: #1E1E1E; /* Dark background color */
+    border-radius: 12px;
+    transition: 0.3s;
+    color: white;
+    font-family: 'Inter', sans-serif; /* Use Inter font */
+    max-width: 300px; /* Adjust width as needed */
+    border: 1px solid rgba(255, 255, 255, 0.2); /* Subtle border */
+    text-align: left; /* Align text to the left */
+}
+
+.feature-card h3 {
+    font-size: 1.8rem; /* Larger font size for the title */
+    margin-bottom: 15px;
+    background: white;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: 700; /* Bold font weight */
+    font-family: 'Space Grotesk', sans-serif;
+    display: flex; /* Use flexbox to align icon and text */
+    align-items: center; /* Vertically center the icon and text */
+    gap: 10px; /* Add gap between icon and text */
+}
+
+.feature-card h3 .title-icon {
+    width: 24px; /* Adjust icon size as needed */
+    height: 24px; /* Adjust icon size as needed */
+}
+
+.feature-card p {
+    font-size: 1rem;
+    color: lightgray;
+    margin-bottom: 20px;
+    line-height: 1.6; /* Adjust line height for better readability */
+}
+
+.feature-card ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.feature-card ul li {
+    font-size: 1rem;
+    color: lightgray;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    font-weight: 300; /* Light font weight for list items */
+}
+
+.feature-card ul li::before {
+    content: '✓';
+    color: rgb(50, 98, 255);
+    margin-right: 10px;
+    font-size: 1.2rem;
+}
+
+.feature-card:hover {
+    transform: scale(1.02);
+    background: #2E2E2E; /* Slightly lighter background on hover */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3); /* Add a subtle shadow on hover */
+}
+
+/* Footer */
+footer {
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.8);
+}
