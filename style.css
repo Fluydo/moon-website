@@ -164,7 +164,7 @@ h1, h2 {
 .feature-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Grid with auto-fit columns */
-    gap: 20px;
+    gap: 10px;
     width: 100%; /* Take up full width */
     justify-content: right; /* Align cards to the right */
 }
