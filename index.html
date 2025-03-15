@@ -5,29 +5,58 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Moon Executor</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/png" href="images/logoImage.png">
 </head>
 <body>
     <header>
         <nav>
             <img class="logoImage" src="images/logoImage.png" alt="Logo">
+            <div class="divider"></div>
             <ul>
-                <li><a href="#home">Home</a></li>
-                <li><a href="#features">Features</a></li>
-                <li><a href="#download">Download</a></li>
-                <li><a href="#support">Support</a></li>
+                <li><a href="#home" title="Home"><img src="icons/house.svg" alt="Home Icon" class="nav-icon"></a></li>
+                <li><a href="#features" title="Features"><img src="icons/bars.svg" alt="Features Icon" class="nav-icon"></a></li>
+                <li><a href="dowloads/Moon.zip" title="Download"><img src="icons/download.svg" alt="Download Icon" class="nav-icon"></a></li>
+                <li><a href="#discord" title="Support"><img src="icons/ticket.svg" alt="Support Icon" class="nav-icon"></a></li>
             </ul>
+            <div id="musicContainer">
+                <div id="songDetails">
+                    <div id="songTitle">Song Title</div>
+                    <div id="songAuthor">Song Author</div>
+                </div>
+                <button id="musicButton">
+                    <img id="musicIcon" src="default.png" alt="Music Cover">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M0 256a256 256 0 1 1 512 0A256 256 0 1 1 0 256zM188.3 147.1c-7.6 4.2-12.3 12.3-12.3 20.9l0 176c0 8.7 4.7 16.7 12.3 20.9s16.8 4.1 24.3-.5l144-88c7.1-4.4 11.5-12.1 11.5-20.5s-4.4-16.1-11.5-20.5l-144-88c-7.4-4.5-16.7-4.7-24.3-.5z"/></svg>
+                </button>
+                <audio id="backgroundMusic" preload="none"></audio>
+            </div>
         </nav>
     </header>
     
-        <section id="home">
-            <img class="image" src="images/moon.png" alt="Executor">
-            <div class="text-content">
-                <h1>Moon Executor</h1>
-                <p>We offer 95 UNC and 100 SUNC, delivering unmatched quality and reliability. With AI-powered support and a dedicated 24/7 active staff, you’ll always have the help you need, whenever you need it. Experience efficiency and excellence with us!</p>
-                <a href="#download" class="btn">Download Now</a>
-            </div>
-        </section>
+    <section id="home">
+        <img class="image" src="images/moon.png" alt="Executor">
+        <div class="text-content">
+            <h1>Moon Executor</h1>
+            <p>We offer 95 UNC and 100 SUNC, delivering unmatched quality and reliability. With AI-powered support and a dedicated 24/7 active staff, you’ll always have the help you need, whenever you need it. Experience efficiency and excellence with us!</p>
+            <a href="dowloads/Moon.zip" class="btn">Download Now</a>
+        </div>
+    </section>
+
+    <section id="discord">
+        <div class="text-content">
+            <h1>Moon Discord</h1>
+            <p>We offer a thriving Discord community with 24/7 active support and AI-powered assistance to ensure you get help whenever you need it. Our dedicated staff is always ready to assist, fostering a friendly and efficient environment. Join us today and experience top-tier support and engagement!</p>
+            <a href="https://discord.gg/7HMaJhsU7s" class="btn">Join Now</a>
+        </div>
+        <img class="image" src="images/discord.png" alt="Discord">
+    </section>
     
+    <section id="bot">
+        <img class="image" src="images/bot.png" alt="Bot">
+        <div class="text-content">
+            <h1>Moon Discord Bot</h1>
+            <p>We provide a powerful Discord bot packed with advanced features, ensuring seamless moderation, automation, and entertainment for your server. With AI-powered responses, customizable commands, and 24/7 active support, you'll always have the tools you need to enhance your community. Elevate your server experience with efficiency and reliability!</p>
+        </div>
+    </section>
     
     <section id="features">
         <div class="text-content2">
@@ -37,8 +66,9 @@
         <div class="feature-grid">
             <!-- Existing Card -->
             <div class="feature-card">
+                <div class="frame"></div>
                 <h3>
-                    <img src="icons/shield.svg" alt="Shield Icon" class="title-icon" fill="rgb(50, 98, 255)"> <!-- Add the SVG icon -->
+                    <img src="icons/shield.svg" alt="Shield Icon" class="title-icon"> <!-- Add the SVG icon -->
                     UNC & SUNC
                 </h3>
                 <p>Moon offers compatibility with<br>sUNC and UNC, delivering<br>smooth functionality for various<br>features.</p>
@@ -51,8 +81,9 @@
     
             <!-- New Card: Free -->
             <div class="feature-card">
+                <div class="frame"></div>
                 <h3>
-                    <img src="icons/money.svg" alt="Free Icon" class="title-icon" fill="rgb(50, 98, 255)"> <!-- Add the SVG icon -->
+                    <img src="icons/money.svg" alt="Free Icon" class="title-icon"> <!-- Add the SVG icon -->
                     Free
                 </h3>
                 <p>Moon is completely free to use,<br>offering premium features without<br>any hidden costs or subscriptions.</p>
@@ -65,8 +96,9 @@
     
             <!-- New Card: Support -->
             <div class="feature-card">
+                <div class="frame"></div>
                 <h3>
-                    <img src="icons/bug.svg" alt="Support Icon" class="title-icon" fill="rgb(50, 98, 255)"> <!-- Add the SVG icon -->
+                    <img src="icons/ticket.svg" alt="Support Icon" class="title-icon"> <!-- Add the SVG icon -->
                     Support
                 </h3>
                 <p>Get 24/7 support from our team,<br>ensuring you never face issues<br>while using Moon.</p>
@@ -79,8 +111,9 @@
     
             <!-- New Card: Good UI -->
             <div class="feature-card">
+                <div class="frame"></div>
                 <h3>
-                    <img src="icons/plug.svg" alt="UI Icon" class="title-icon" fill="blue"> <!-- Add the SVG icon -->
+                    <img src="icons/layers.svg" alt="UI Icon" class="title-icon"> <!-- Add the SVG icon -->
                     Good UI
                 </h3>
                 <p>Enjoy a sleek and intuitive user<br>interface designed for ease of use<br>and maximum productivity.</p>
@@ -91,12 +124,6 @@
                 </ul>
             </div>
         </div>
-    </section>
-    
-    <section id="download">
-        <h2>Get Moon Executor</h2>
-        <p>Join thousands of users enjoying the best Roblox executor.</p>
-        <a href="https://discord.gg/7HMaJhsU7s" class="btn">Join Discord</a>
     </section>
     
     <footer>
